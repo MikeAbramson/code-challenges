@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>SEPTA Regional Rail Fare Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/global.css" media="screen"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+    <!--[if lte IE 8]>
+        <link href="/css/ie8.css" media="all" />
+    <![endif]-->
+</head>
+
+<body>
+    <header>
+        <h1>Regional Rail Fares</h1>
+    </header>
+
+    <main>
+        <div class="where">
+            <h2>Where are you going?</h2>
+            <select>
+              <option value="Zone 1">Zone 1</option>
+              <option value="Zone 2">Zone 2</option>
+              <option value="Zone 3">Zone 3</option>
+              <option value="Zone 4" selected="selected">Zone 4</option>
+            </select>
+        </div>
+        <div class="when">
+            <h2>When are you riding?</h2>
+            <select>
+              <option value="Weekdays" selected="selected">Weekdays</option>
+              <option value="Weekend">Weekend</option>
+            </select>
+            <p>Helper text that explains the options above.</p>
+        </div>
+        <div class="purchase-location">
+            <h2>Where will you purchase the fare?</h2>
+            <div class="input-wrap">
+                <input type="radio" name="location" checked> <span>Station Kiosk</span>
+                <input type="radio" name="location"><span>Onboard</span>
+            </div>
+        </div>
+        <div class="rides">
+            <h2>How many rides will you need?</h2>
+            <input type="number" name="rides-needed" value="4" min="1">
+        </div>
+    </main>
+
+    <footer>
+        <h2>Your fare will cost</h2>
+        <p>$28.00</p>
+    </footer>
+</body>
+</html>

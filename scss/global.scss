@@ -1,0 +1,244 @@
+/* ===========================================================
+   ASSETS
+=========================================================== */
+@import "asset/var";
+@import "asset/typography";
+@import "asset/mixins";
+
+/* ===========================================================
+   DEFAULT
+=========================================================== */
+
+body {
+    border: 4px solid $c-border;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* ===========================================================
+   HEADER
+=========================================================== */
+
+header {
+    background: $c-gray;
+
+    h1 {
+        padding: 20px 0;
+        margin: 0 0 0 23%;
+        position: relative;
+
+        &:before {
+            background: url('../images/sprites.png') no-repeat -9px -10px;
+            width: 62px;
+            height: 45px;
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: -80px;
+        }
+
+    }
+
+    @include bp($bp-XL) {
+
+        h1 {
+            margin: 0 0 0 0;
+            text-align: center;
+            font-size: 30px;
+
+
+            &:before {
+                left: 26px;
+                top: 16px;
+            }
+        }
+    }
+
+    @include bp($bp-L) {
+        
+        h1 {
+            font-size: 26px;
+            text-align: left;
+            padding-left: 80px;
+
+            &:before {
+                top: 11px;
+                left: 6px;
+            }
+        }
+    }
+
+    @include bp($bp-M) {
+
+        h1 {
+            font-size: 22px;
+        }
+    }
+}
+
+/* ===========================================================
+   MAIN
+=========================================================== */
+
+main {
+    margin: 0;
+
+    .where,
+    .when,
+    .purchase-location,
+    .rides {
+        padding: 48px 40px 43px 40px;
+        border-bottom: 2px solid $c-border;
+    }
+
+    .where h2,
+    .when h2 {
+        position: relative;
+        
+        &:after {
+            background: url('../images/sprites.png') no-repeat -101px -25px;
+            width: 24px;
+            height: 16px;
+            content: "";
+            position: absolute;
+            top: 112px;
+            right: 16px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 38px;
+    }
+
+    input, select {
+        font-size: 34px;
+        color: $c-text;
+        width: 100%;
+        border: 2px solid $c-input-border;
+        border-radius: 4px;
+        padding: 22px 0 22px 23px;
+    }
+
+    select {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        
+        option {
+            padding: 0 0 8px 23px;
+
+        }
+    }
+
+    .when p {
+        text-align: center;
+        font-size: 24px;
+        color: #808080;
+        margin-top: 28px;
+    }
+
+    .purchase-location {
+
+        .input-wrap {
+            max-width: 267px;
+            margin: 0 auto;
+
+            input {
+                width: 30px;
+                height: 29px;
+                margin-bottom: 22px;
+            }
+        }
+    }
+
+    .rides input {
+        width: 188px;
+        margin: 0 auto;
+        padding: 0;
+        display: block;
+        text-align: center;
+        -webkit-appearance: none;
+        -moz-appearance:textfield;
+    }
+
+    @include bp($bp-L) {
+
+        .where,
+        .when,
+        .purchase-location,
+        .rides {
+            padding: 48px 10px 43px 10px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        .where h2,
+        .when h2 {
+            position: relative;
+
+            &:after {
+                top: 95px;
+            }
+        }
+
+        input, select {
+            font-size: 27px;
+            padding: 11px 0 11px 11px;
+        }
+
+        .when p {
+            font-size: 20px;
+        }
+
+        .purchase-location {
+
+            .input-wrap {
+                width: 223px;
+
+                span {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .rides input {
+            width: 84px;
+        }
+    }
+}
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+
+footer {
+    background: $c-gray;
+    padding: 40px 0;
+    
+    h2 {
+        color: $c-white;
+    }
+
+    p {
+        text-align: center;
+        font-size: 88px;
+        line-height: 100px;
+        margin-top: 20px;
+        font-weight: bold;
+
+    }
+
+    @include bp($bp-XL) {
+        padding: 20px 0;
+        
+        h2 {
+            font-size: 27px;
+        }
+
+        p {
+            font-size: 64px;
+            margin-top: 0px;
+        }
+    }
+}

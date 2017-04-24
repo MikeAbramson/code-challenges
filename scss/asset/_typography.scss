@@ -1,0 +1,32 @@
+/* ===========================================================
+   TYPOGRAPHY
+=========================================================== */
+
+h1 {
+    font: 40px $f-default;
+    color: $c-white;
+    font-weight: 500;
+}
+
+h2 {
+    font: 32px $f-default;
+    color: $c-text;
+    line-height: 34px;
+    text-align: center;
+    margin: 0;
+    //font-weight: bold;
+}
+
+p {
+    font-size: $f-size;
+    line-height: 30px;
+    font-family: $f-default;
+    color: $c-white;
+    margin: 0;
+}
+
+span {
+    font: 32px $f-default;
+    color: $c-text;
+}
+
